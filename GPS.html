@@ -1,104 +1,25 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Gregorian Calendar Months</title>
+        <title>GPS Analysis</title>
+    </head>
 
         <style>
-            body {
-                font-family: "Verdana", sans-serif;
-            }
-
-            h2 {
-                font-size: 6em;
-                margin: 10px;
-            }
-
-            h3 {
-                margin: 0px;
-            }
-
-            select {
-                font-size: 1.2em;
-                outline: none;
-            }
-
-            label {
-                width: 200px;
-                text-align: right;
-                margin-left:40px;
-                margin-right:5px;
-                color: green;
-            }
-
-            .mt-50 {
-                margin-top: 50px;
-            }
-
-            .mb-50 {
-                margin-bottom: 50px;
-            }
-
-            .ml-50 {
-                margin-left: 50px;
-            }
-
-            .center {
+            title {
+                background-color: aquamarine;
+                font-family: sans-serif;
+                font-size: 100px;
                 text-align: center;
             }
+                
         </style>
 
         <script>
-            var days =["31", "28/29", "31", "30", "31", "30", "31", "31", "30", "31", "30", "31"];
             
-            function selectMonth() {
-                // get the value from the select element
-                var month = document.getElementById("months").value;
-                
-                var html = "";
-                
-                // get days from array using month value
-                if(month != ""){
-                    html = "<h2>" + days[month] + "</h2>";
-                    html += "<h3>days</h3>";
-                    
-                    //insert html into div
-                    document.getElementById("days").innerHTML = html;
-                }
-                else{
-                    document.getElementById("days").innerHTML = "";
-                }
-                
-            }
         </script>
 
-    </head>
-
     <body>
-        <h1 class="mb-50">Gregorian Calendar Months</h1>
-
-        <div class="mt-50">
-            <label for="months">Month</label>
-            <!-- Insert Select Element with each month as option -->
-            <select id="months" onchange="selectMonth()">
-            <option value="">Select Month</option>
-            <option value="0">January</option>
-            <option value="1">February</option>
-            <option value="2">March</option>
-            <option value="3">April</option>
-            <option value="4">May</option>
-            <option value="5">June</option>
-            <option value="6">July</option>
-            <option value="7">August</option>
-            <option value="8">September</option>
-            <option value="9">October</option>
-            <option value="10">November</option>
-            <option value="11">December</option>
-            </select>
-        </div>
-
-        <div class="mt-50 center" id="days">
-        </div>
-
+        
 </body> 
 
 </html>
