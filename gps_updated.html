@@ -43,9 +43,27 @@
             
             #graphs {
                 width: 100%;
-                padding-left: 35%;
+                margin-top:0px;
+                
             }
             
+            #stats {
+                width:40%;
+                margin-top:0px;
+            }
+            
+            .flex {
+                display: flex;
+            }
+            
+            #headstats {
+                margin-top:0px;
+            }
+            
+            #para {
+                padding-bottom: 40px;
+                border-bottom: 2px solid black;
+            }
         </style>
     
         <script src="chart-js-helper.js"></script>
@@ -58,28 +76,29 @@
         
         <article>
             <h1><u>Words</u></h1>
-            <p>Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words.</p>
+            <p id="para">Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words.</p>
         </article>
         
         <article>
-            <img src="Heart%20Rate.PNG" width="65%" align="right">
+            
         </article>
         
-        <article>
-            <h1>Statistics</h1>
-            <p>Distance: 9.8km</p><br>
-            <p>Max Speed: 23.6km</p><br>
-            <p>Average Speed: 6.2 km</p><br>
-            <p>Min Altitude: 152.2</p><br>
-            <p>Min Heart-Rate: 113 BPM</p><br>
+        <article class="flex">
+            <div id="stats">
+                <h1 id="headstats">Statistics</h1>
+                <p>Distance: 9.8km</p><br>
+                <p>Max Speed: 23.6km</p><br>
+                <p>Average Speed: 6.2 km</p><br>
+                <p>Min Altitude: 152.2</p><br>
+                <p>Min Heart-Rate: 113 BPM</p><br>
+            </div>
+            <div id="graphs">
+                <canvas id="altitude-canvas" height="70"></canvas> 
+                <canvas id="hr-canvas" height="70"></canvas>
+                <canvas id="speed-canvas" height="70"></canvas>
+            </div>
         </article>
         
-        <article id="graphs">
-                <canvas id="altitude-canvas" height="60"></canvas> 
-                <canvas id="hr-canvas" height="60"></canvas>
-            <canvas id="speed-canvas" height="60"></canvas>
-            //hello
-        </article>
 </body> 
     <script>
         //altitude graph
